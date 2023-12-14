@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
 
 public class VramCalc extends JFrame implements ActionListener {
     int bus;
@@ -106,7 +107,7 @@ public class VramCalc extends JFrame implements ActionListener {
                 bus = Integer.parseInt(this.busField.getText());
                 freq = Double.parseDouble(this.freqField.getText());
                 band = ((bus * freq) / 8);
-                bandLabel.setText(band + " GBp/s");
+                bandLabel.setText(String.format(Locale.US ,"%.2f", band) + " GBp/s");
                 bandLabel.setVisible(true);
             } catch (NumberFormatException ex) {
                 bandLabel.setText("Please, use valid numbers.");
