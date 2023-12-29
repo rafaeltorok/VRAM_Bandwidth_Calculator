@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VRAM_Bandwidth_Calculator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/VRAM_Bandwidth_Calculator_jar</output-path>
+    <root id="archive" name="VRAM_Bandwidth_Calculator.jar">
+      <element id="module-output" name="VRAM_Bandwidth_Calculator" />
+    </root>
+  </artifact>
+</component>
