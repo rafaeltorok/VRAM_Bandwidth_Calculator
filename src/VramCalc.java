@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.util.Locale;
+import java.util.Objects;
 
 public class VramCalc extends JFrame implements ActionListener {
     int bus;
@@ -31,10 +31,10 @@ public class VramCalc extends JFrame implements ActionListener {
         frame.setBackground(Color.lightGray);
         frame.setResizable(false);
         frame.setLayout(new GridLayout(4,1));
-        icon = new ImageIcon("img" + File.separator + "icon.png");
+        icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("img/icon.png")));
         frame.setIconImage(icon.getImage());
 
-        title = new JLabel(new ImageIcon("img" + File.separator + "logo.png"));
+        title = new JLabel(new ImageIcon(Objects.requireNonNull(getClass().getResource("img/logo.png"))));
         titlePanel = new JPanel();
         titlePanel.add(title);
         titlePanel.setLayout(new GridLayout(1,1));
